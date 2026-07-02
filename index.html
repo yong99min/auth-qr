@@ -34,6 +34,11 @@
   h1 {
     font-size: 22px;
     color: #222;
+    margin: 0 0 8px;
+  }
+  p {
+    color: #888;
+    font-size: 14px;
     margin: 0;
   }
 </style>
@@ -46,6 +51,12 @@
       </svg>
     </div>
     <h1>인증되었습니다</h1>
+    <p id="time"></p>
   </div>
+  <script>
+    const now = new Date();
+    const t = now.toLocaleTimeString("ko-KR", { timeZone: "Asia/Seoul", hour12: false });
+    document.getElementById("time").textContent = t + " 인증";
+  </script>
 </body>
 </html>
